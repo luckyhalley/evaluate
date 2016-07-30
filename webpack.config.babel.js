@@ -5,7 +5,7 @@ module.exports = {
   context: process.cwd(),
   entry: {
     evaluate: [
-      'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',
+      'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=1000',
       './src/js/app.js'
     ]
   },
@@ -14,19 +14,26 @@ module.exports = {
     filename: '[name]/bundle.js'
   },
   module: {
-    loaders: [{
-      test: /\.js$/,
-      exclude: /node_modules/,
-      loader: 'babel-loader'
-    }]
+    loaders: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader'
+      },
+      {
+        test: /\.scss$/,
+        loader: "style-loader?sourceMap!css-loader?sourceMap&modules!sass?sourceMap"
+      }
+    ]
+  },
+  sassLoader: {
+    includePaths: [path.resolve(__dirname, "./src/styles")]
   },
   resolve: {
-    root: ["src/js", "node_modules", "."],
-    modulesDirectories: ["node_modules"],
-    extensions: ["", ".js"]
-  },
-  resolveLoader: {
-    root: path.join(process.cwd(), 'node_modules')
+    root: [
+      path.resolve('src/js'),
+      path.resolve('node_modules')
+    ]
   },
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),

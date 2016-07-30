@@ -1,0 +1,40 @@
+@import "base";
+
+.toast {
+  z-index: 1000;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: pxTorem(500px);
+  height: pxTorem(80px);
+  line-height: pxTorem(80px);
+  margin-top: -(pxTorem(40px));
+  margin-left: -(pxTorem(250px));
+  background-color: rgb(0, 0, 0);
+  padding: 0;
+  text-align: center;
+  color: #fff;
+  border-radius: 3px;
+  font-size: 14px;
+  -webkit-animation-name: fadeinout;
+  -webkit-animation-duration: 2.5s;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+}
+
+@keyframes fadeinout {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.7;
+  }
+  75% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+

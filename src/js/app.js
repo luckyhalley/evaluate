@@ -5,13 +5,13 @@ import configureStore from './store';
 import { Provider } from 'react-redux';
 
 
-// if (module.hot) {
-//   module.hot.accept();
-// }
+if (module.hot) {
+  module.hot.accept();
+}
 const store = configureStore();
 ReactDOM.render(
   <Provider store={store}>
-    <Container />
+    <Container/>
   </Provider>,
   document.querySelector('.page')
 );

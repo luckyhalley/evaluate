@@ -1,13 +1,16 @@
 import React, {Component, PropTypes} from 'react';
 import {mapState, mapDispatch} from './param';
 import {connect} from 'react-redux';
+import Toast from 'components/toast';
 class Container extends Component {
   constructor(props) {
     super(props);
   }
   render() {
     return (
-      <div>TODO</div>
+      <div>
+        <Toast text="in preparation."></Toast>
+      </div>
     );
   }
 }

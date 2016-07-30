@@ -12,7 +12,7 @@ let render = views('./views', {
   }),
   router = Router();
 
-router.get('/index', async ctx => ctx.body = await render('index'));
+router.get('/', async ctx => ctx.body = await render('index'));
 
 app.use(router.routes());
 

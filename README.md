@@ -5,4 +5,4 @@ Simple example for react-redux
 	npm install
 	npm start
 
->Open http://localhost:3000/index in browser
+>Open http://localhost:3000/ in browser
