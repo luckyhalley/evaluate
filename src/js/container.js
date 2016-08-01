@@ -9,7 +9,7 @@ class Container extends Component {
   render() {
     return (
       <div>
-        <Toast text="in preparation."></Toast>
+        <Toast text="in preparation."/>
       </div>
     );
   }
