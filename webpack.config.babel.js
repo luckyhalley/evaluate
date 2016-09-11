@@ -2,7 +2,8 @@ import webpack from 'webpack';
 import path from 'path';
 import autoprefixer from "autoprefixer";
 
-module.exports = {
+
+let config = {
   devtool: 'eval',
   context: process.cwd(),
   entry: {
@@ -24,13 +25,15 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        loader: "style-loader?sourceMap!css-loader?sourceMap&modules!postcss-loader!sass?sourceMap"
+        loader: "style-loader!css-loader?modules!postcss-loader!sass"
       }
     ]
   },
   sassLoader: {
-    includePaths: [path.resolve(__dirname, "./src/styles")]
+    includePaths: [path.resolve(__dirname, "./src/styles")],
+    outputStyle: 'compressed' //nested, expanded, compact, compressed
   },
+
   postcss: [autoprefixer],
   resolve: {
     root: [
@@ -38,9 +41,19 @@ module.exports = {
       path.resolve('node_modules')
     ]
   },
+  externals: {
+
+  },
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
+    new webpack.NoErrorsPlugin(),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false
+      }
+    })
   ]
-}
+};
+
+module.exports = config;
