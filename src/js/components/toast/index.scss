@@ -16,11 +16,11 @@
   color: #fff;
   border-radius: 3px;
   font-size: 14px;
-  -webkit-animation-name: fadeinout;
-  -webkit-animation-duration: 2.5s;
-  -webkit-animation-timing-function: ease-in-out;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-fill-mode: forwards;
+  animation-name: fadeinout;
+  animation-duration: 2.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 @keyframes fadeinout {

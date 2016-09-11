@@ -1,5 +1,7 @@
 import webpack from 'webpack';
 import path from 'path';
+import autoprefixer from "autoprefixer";
+
 module.exports = {
   devtool: 'eval',
   context: process.cwd(),
@@ -22,13 +24,14 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        loader: "style-loader?sourceMap!css-loader?sourceMap&modules!sass?sourceMap"
+        loader: "style-loader?sourceMap!css-loader?sourceMap&modules!postcss-loader!sass?sourceMap"
       }
     ]
   },
   sassLoader: {
     includePaths: [path.resolve(__dirname, "./src/styles")]
   },
+  postcss: [autoprefixer],
   resolve: {
     root: [
       path.resolve('src/js'),
