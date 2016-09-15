@@ -1,6 +1,7 @@
-import webpack from 'webpack';
-import path from 'path';
+import webpack from "webpack";
+import path from "path";
 import autoprefixer from "autoprefixer";
+import ExtractTextPlugin from "extract-text-webpack-plugin";
 
 
 let config = {
@@ -14,7 +15,7 @@ let config = {
   },
   output: {
     path: '/build',
-    filename: '[name]/bundle.js'
+    filename: '[name]/js/bundle.js'
   },
   module: {
     loaders: [
@@ -25,7 +26,11 @@ let config = {
       },
       {
         test: /\.scss$/,
-        loader: "style-loader!css-loader?modules!postcss-loader!sass"
+        loader: ExtractTextPlugin.extract(
+          ["css-loader?modules",
+            "postcss-loader",
+            "sass-loader"
+          ])
       }
     ]
   },
@@ -41,10 +46,9 @@ let config = {
       path.resolve('node_modules')
     ]
   },
-  externals: {
-
-  },
+  externals: {},
   plugins: [
+    new ExtractTextPlugin("[name]/styles/bundle.css"),
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
