@@ -1,0 +1,28 @@
+@import 'base.scss';
+
+.root{
+  height: pxTorem(96px);
+  line-height: pxTorem(96px);
+  background: #49b849;
+  padding: 0px pxTorem(22px);
+  color: #ffffff;
+  display: flex;
+}
+
+.left{
+  width: pxTorem(60px);
+  font-size: pxTorem(28px);
+}
+
+.center{
+  font-size: pxTorem(32px);
+  text-align: center;
+  flex-grow: 1;
+  overflow: ellipsis;
+}
+
+.right{
+  width: pxTorem(60px);
+  font-size: pxTorem(32px);
+  text-align: right;
+}
