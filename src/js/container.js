@@ -11,7 +11,7 @@ class Container extends Component {
   render() {
     return (
       <div>
-        <Header/>
+        <Header title="Evaluate"/>
         <Toast text="in preparation."/>
       </div>
     );

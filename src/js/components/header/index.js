@@ -11,7 +11,7 @@ export default class Header extends Component {
         <div className={styles.left}>
           <i className="hui-icon hui-icon-carat-w"></i>
         </div>
-        <div className={styles.center}>标题</div>
+        <div className={styles.center}>{this.props.title}</div>
         <div className={styles.right}>
 
         </div>
