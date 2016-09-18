@@ -3,6 +3,7 @@ import {mapState, mapDispatch} from "./param";
 import {connect} from "react-redux";
 import Toast from "components/toast";
 import Header from "components/header";
+import CourseInfo from "components/course-info";
 class Container extends Component {
   constructor(props) {
     super(props);
@@ -12,6 +13,7 @@ class Container extends Component {
     return (
       <div>
         <Header title="Evaluate"/>
+        <CourseInfo/>
         <Toast text="in preparation."/>
       </div>
     );
