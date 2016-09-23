@@ -1,9 +1,0 @@
-$font_size: 18px;
-$background_color: #6699cc;
-$browser-default-font-size: 75px;
-@function pxTorem($px){
-  @return $px / $browser-default-font-size * 1rem;
-}
-body{
-  background-color: #fff;
-}
