@@ -3,7 +3,7 @@ import path from "path";
 import autoprefixer from "autoprefixer";
 import ExtractTextPlugin from "extract-text-webpack-plugin";
 
-
+let public_path = '/evaluate/';
 let config = {
   devtool: 'eval',
   context: process.cwd(),
@@ -14,8 +14,8 @@ let config = {
     ]
   },
   output: {
-    path: '/build',
-    filename: '[name]/js/bundle.js'
+    path: public_path,
+    filename: 'js/bundle.js'
   },
   module: {
     loaders: [
@@ -25,12 +25,24 @@ let config = {
         loader: 'babel-loader'
       },
       {
-        test: /\.scss$/,
+        test: /\.scss\?m$/,
         loader: ExtractTextPlugin.extract(
           ["css-loader?modules",
             "postcss-loader",
             "sass-loader"
           ])
+      },
+      {
+        test: /\.scss$/,
+        loader: ExtractTextPlugin.extract(
+          ["css-loader",
+            "postcss-loader",
+            "sass-loader"
+          ])
+      },
+      {
+        test: /\.(ttf|eot|svg|woff)$/,
+        loader: "file-loader?name=" + public_path + "font/[name].[ext]"
       }
     ]
   },
@@ -48,7 +60,7 @@ let config = {
   },
   externals: {},
   plugins: [
-    new ExtractTextPlugin("[name]/styles/bundle.css"),
+    new ExtractTextPlugin("styles/bundle.css"),
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),

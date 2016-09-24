@@ -1,4 +1,4 @@
-import styles from './index.scss';
+import styles from "./index.scss?m";
 import React, {Component} from 'react';
 
 export default class Star extends Component {
@@ -25,9 +25,9 @@ export default class Star extends Component {
       stars = [], style = ``;
     for (let i = 1; i <= max; i++) {
       if (score && score[name] && score[name] >= i) {
-        style = `hui-icon-star-solid star selected`;
+        style = `{styles.icon-star-solid} star selected`;
       } else {
-        style = `hui-icon-star-solid star unselected`;
+        style = `icon-star-solid star unselected`;
       }
       stars.push(<li key={i} className={style} onClick={e => this.starTo(e, i)} data-index={i}></li>);
     }

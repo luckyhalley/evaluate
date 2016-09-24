@@ -3,8 +3,8 @@ import Router from 'koa-router';
 import views from 'co-views';
 import webpack from 'webpack';
 import {devMiddleware, hotMiddleware} from 'koa-webpack-middleware';
-import devConfig from './webpack.config.babel';
-const compile = webpack(devConfig);
+import config from './webpack.config.babel';
+const compile = webpack(config);
 const app = new koa();
 
 let render = views('./views', {
@@ -16,7 +16,9 @@ router.get('/', async ctx => ctx.body = await render('index'));
 
 app.use(router.routes());
 
-app.use(devMiddleware(compile));
+app.use(devMiddleware(compile, {
+  publicPath: config.output.path
+}));
 
 app.use(hotMiddleware(compile));
 

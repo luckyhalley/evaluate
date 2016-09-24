@@ -1,3 +1,4 @@
+import styles from '../styles/layout.scss';
 import React, {Component, PropTypes} from 'react';
 import ReactDOM from 'react-dom';
 import Container from './container';

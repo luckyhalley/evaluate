@@ -4,6 +4,8 @@ import {connect} from "react-redux";
 import Toast from "components/toast";
 import Header from "components/header";
 import CourseInfo from "components/course-info";
+import Star from "components/star";
+
 class Container extends Component {
   constructor(props) {
     super(props);
@@ -14,6 +16,7 @@ class Container extends Component {
       <div>
         <Header title="Evaluate"/>
         <CourseInfo/>
+        <Star setScore='' max={5} name='star-1' readonly='true'/>
         <Toast text="in preparation."/>
       </div>
     );
