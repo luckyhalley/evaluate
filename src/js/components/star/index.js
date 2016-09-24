@@ -25,9 +25,9 @@ export default class Star extends Component {
       stars = [], style = ``;
     for (let i = 1; i <= max; i++) {
       if (score && score[name] && score[name] >= i) {
-        style = `{styles.icon-star-solid} star selected`;
+        style = `icon-star-solid ${styles.star} ${styles.selected}`;
       } else {
-        style = `icon-star-solid star unselected`;
+        style = `icon-star-solid ${styles.star} ${styles.unselected}`;
       }
       stars.push(<li key={i} className={style} onClick={e => this.starTo(e, i)} data-index={i}></li>);
     }
