@@ -5,7 +5,6 @@ import Container from './container';
 import configureStore from './store';
 import { Provider } from 'react-redux';
 
-
 if (module.hot) {
   module.hot.accept();
 }
@@ -16,4 +15,3 @@ ReactDOM.render(
   </Provider>,
   document.querySelector('.page')
 );
-
