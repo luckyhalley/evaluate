@@ -17,11 +17,13 @@ class Container extends Component {
     actionGetCourseInfo(0);
   }
   render() {
-    
+    let { evaluate } = this.props,
+      { course } = evaluate;
+    console.log(this.props);
     return (
       <div>
         <Header title="Evaluate"/>
-        <CourseInfo/>
+        <CourseInfo {...course}/>
         <Star setScore='' max={5} name='star-1' readonly='true'/>
         <Toast text="in preparation."/>
       </div>
