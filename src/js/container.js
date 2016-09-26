@@ -10,8 +10,14 @@ class Container extends Component {
   constructor(props) {
     super(props);
   }
-
+  componentWillMount() {
+    let {
+      actionGetCourseInfo
+    } = this.props;
+    actionGetCourseInfo(0);
+  }
   render() {
+    
     return (
       <div>
         <Header title="Evaluate"/>
