@@ -7,7 +7,6 @@ export default class CourseInfo extends Component {
     super(props);
   }
   render() {
-    console.log(this.props);
     let {
       beginTime,
       className,

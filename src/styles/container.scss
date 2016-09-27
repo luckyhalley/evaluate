@@ -1,0 +1,137 @@
+@import 'config';
+body{
+  background-color: rgb(240, 240, 240);
+}
+.label{
+  width: 2rem;
+  display: inline-block;
+  font-size: 12px;
+  color: rgb(171, 171, 171);
+}
+.stars{
+  width: 8rem;
+  display: inline-block;
+}
+.list{
+  font-size: 0px;
+  margin: 10px 0;
+  padding: 15px pxTorem(32px) 0;
+  background-color: #fff;
+}
+.item{
+  ul{
+    display: inline-block;
+  }
+}
+.min{
+  height: 40px;
+  line-height: 40px;
+}
+.right{
+  float: right;
+}
+.text{
+  width: 100%;
+  height: pxTorem(112px);
+  margin: 0;
+  padding: 10px;
+  overflow: hidden;
+  background-color: rgb(247,247,247);
+  resize: none;
+  border: none;
+  border-radius: 10px;
+  box-sizing: border-box;
+  color:#000;
+  font-size: 14px;
+}
+input[type="checkbox"] {
+  display: none;
+}
+.submit{
+  width: 90%;
+  height: pxTorem(88px);
+  line-height: pxTorem(88px);
+  color:#fff;
+  font-size: pxTorem(36px);
+  margin: pxTorem(40px) pxTorem(32px);
+  text-align: center;
+  background-color: rgb(73,184,73);
+  border-radius: pxTorem(44px);
+}
+.disable{
+  @extend .submit;
+  background-color: #ccc;
+}
+
+.anonymous + label {
+  margin-top: 8px;
+  background-color: #fafbfa;
+  padding: 9px;
+  border-radius: 50px;
+  display: inline-block;
+  position: relative;
+  -webkit-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+  width: 23px;
+  height: 4px;
+}
+
+.anonymous + label:after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  -webkit-transition: box-shadow 0.1s ease-in;
+  transition: box-shadow 0.1s ease-in;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 100px;
+  box-shadow: inset 0 0 0 0 #eee, 0 0 1px rgba(0,0,0,0.4);
+}
+
+.anonymous + label:before {
+  content: ' ';
+  position: absolute;
+  background: white;
+  top: 1px;
+  left: 2px;
+  z-index: 999999;
+  width: 20px;
+  -webkit-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+  height: 20px;
+  border-radius: 100px;
+  box-shadow: 0 3px 1px rgba(0,0,0,0.05), 0 0px 1px rgba(0,0,0,0.3);
+}
+
+.anonymous:active + label:after {
+  box-shadow: inset 0 0 0 20px #eee, 0 0 1px #eee;
+}
+
+.anonymous:active + label:before {
+  width: 30px;
+}
+
+.anonymous:checked:active + label:before {
+  width: 30px;
+  left: 20px;
+}
+
+.anonymous + label:active {
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+
+.anonymous:checked + label:before {
+  content: ' ';
+  position: absolute;
+  left: 20px;
+  border-radius: 100px;
+}
+
+.anonymous:checked + label:after {
+  content: ' ';
+  font-size: 1.5em;
+  position: absolute;
+  background: #4cda60;
+  box-shadow: 0 0 1px #4cda60;
+}

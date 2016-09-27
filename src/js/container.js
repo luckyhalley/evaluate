@@ -1,3 +1,4 @@
+import styles from '../styles/container.scss?m';
 import React, {Component, PropTypes} from "react";
 import {mapState, mapDispatch} from "./param";
 import {connect} from "react-redux";
@@ -12,19 +13,29 @@ class Container extends Component {
   }
   componentWillMount() {
     let {
-      actionGetCourseInfo
+      actionGetCourseInfo,
+      actionGetScore
     } = this.props;
     actionGetCourseInfo(0);
+    actionGetScore();
   }
   render() {
-    let { evaluate } = this.props,
+    let { evaluate, evaluate_param } = this.props,
       { course } = evaluate;
-    console.log(this.props);
     return (
       <div>
         <Header title="Evaluate"/>
         <CourseInfo {...course}/>
-        <Star setScore='' max={5} name='star-1' readonly='true'/>
+        <ul className={styles.list}>
+          {
+            Object.keys(evaluate_param).map((item, index) =>
+              <li className={styles.item} key={index}>
+                <label className={styles.label}>{evaluate_param[item]}</label>
+                <Star setScore='' max={5} name='star-1' readonly='true'/>
+              </li>
+            )
+          }
+        </ul>
         <Toast text="in preparation."/>
       </div>
     );
