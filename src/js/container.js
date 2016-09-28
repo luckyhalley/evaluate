@@ -35,6 +35,16 @@ class Container extends Component {
               </li>
             )
           }
+            <li className={styles.item}>
+              <textarea className={styles.text} value='' disabled></textarea>}
+            </li>
+            <li className={`${styles.item} ${styles.min} clearfix`}>
+              <span className={styles.right}>
+                <input type="checkbox" id="anonymous" className={styles.anonymous} onChange=''/>
+                <label htmlFor='anonymous'></label>
+              </span>
+            <label className={`${styles.label} ${styles.right}`}>匿名评价</label>
+            </li>
         </ul>
         <Toast text="in preparation."/>
       </div>
