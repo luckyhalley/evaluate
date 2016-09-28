@@ -3,24 +3,24 @@ body{
   background-color: rgb(240, 240, 240);
 }
 .label{
-  width: 2rem;
+  width: 3rem;
   display: inline-block;
   font-size: 12px;
   color: rgb(171, 171, 171);
+  padding-left: pxTorem(32px);
+  box-sizing: border-box;
 }
-.stars{
-  width: 8rem;
-  display: inline-block;
-}
+
 .list{
   font-size: 0px;
   margin: 10px 0;
-  padding: 15px pxTorem(32px) 0;
+  padding: 15px 0 0;
   background-color: #fff;
 }
 .item{
   ul{
     display: inline-block;
+    width: 7rem;
   }
 }
 .min{
