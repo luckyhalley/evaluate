@@ -22,9 +22,11 @@ class Container extends Component {
   render() {
     let { evaluate, evaluate_param, actionUpdateScore } = this.props,
       { course, score } = evaluate;
+    let button = <div className={styles.disable}>提交</div>;
+
     return (
       <div>
-        <Header title="Evaluate"/>
+        <Header title="课程评价"/>
         <CourseInfo {...course}/>
         <ul className={styles.list}>
           {
@@ -46,7 +48,7 @@ class Container extends Component {
             <label className={`${styles.label} ${styles.right}`}>匿名评价</label>
             </li>
         </ul>
-        
+        {button}
       </div>
     );
   }
