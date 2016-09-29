@@ -20,8 +20,8 @@ class Container extends Component {
     actionGetScore();
   }
   render() {
-    let { evaluate, evaluate_param } = this.props,
-      { course } = evaluate;
+    let { evaluate, evaluate_param, actionUpdateScore } = this.props,
+      { course, score } = evaluate;
     return (
       <div>
         <Header title="Evaluate"/>
@@ -31,12 +31,12 @@ class Container extends Component {
             Object.keys(evaluate_param).map((item, index) =>
               <li className={styles.item} key={index}>
                 <label className={styles.label}>{evaluate_param[item]}</label>
-                <Star setScore='' max={5} name='star-1' readonly='true'/>
+                <Star setScore={actionUpdateScore} score={score} max={5} name={item} readonly={false}/>
               </li>
             )
           }
             <li className={styles.item}>
-              <textarea className={styles.text} value='' disabled></textarea>}
+              <textarea className={styles.text} value=''></textarea>}
             </li>
             <li className={`${styles.item} ${styles.min} clearfix`}>
               <span className={styles.right}>
@@ -46,7 +46,7 @@ class Container extends Component {
             <label className={`${styles.label} ${styles.right}`}>匿名评价</label>
             </li>
         </ul>
-        <Toast text="in preparation."/>
+        
       </div>
     );
   }

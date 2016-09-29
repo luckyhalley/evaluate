@@ -1,4 +1,4 @@
-import {actionGetCourseInfo, actionGetScore} from './action';
+import {actionGetCourseInfo, actionGetScore, actionUpdateScore} from './action';
 import {bindActionCreators} from 'redux';
 
 export function mapState(state) {
@@ -16,6 +16,7 @@ export function mapState(state) {
 export function mapDispatch(dispatch) {
   return bindActionCreators({
     actionGetCourseInfo,
-    actionGetScore
+    actionGetScore,
+    actionUpdateScore
   }, dispatch);
 }

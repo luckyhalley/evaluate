@@ -12,6 +12,8 @@ function evaluate(state = initState, action) {
       return objectAssign({}, state, action.course);
     case actionTypes.GET_SCORE:
       return objectAssign({}, state, action.score);
+    case actionTypes.UPDATE_SCORE:
+      return objectAssign({}, state, action.score);
     default:
       return state;
   }
