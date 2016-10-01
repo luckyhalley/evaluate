@@ -48,7 +48,7 @@ class Container extends Component {
             <label className={`${styles.label} ${styles.right}`}>匿名评价</label>
             </li>
         </ul>
-        {button}
+        <div className={styles.footer}>{button}</div>
       </div>
     );
   }

@@ -1,7 +1,5 @@
 @import 'config';
-body{
-  background-color: rgb(240, 240, 240);
-}
+
 .label{
   width: pxTorem(160px);
   display: inline-block;
@@ -11,9 +9,11 @@ body{
 
 .list{
   font-size: 0px;
-  margin: 10px 0;
+  margin: 0px 0;
   padding: 15px pxTorem(32px) 0;
   background-color: #fff;
+  border-top: 10px solid rgb(240, 240, 240);
+  border-bottom: 10px solid rgb(240, 240, 240);
 }
 .item{
   ul{
@@ -51,7 +51,7 @@ input[type="checkbox"] {
   line-height: pxTorem(88px);
   color:#fff;
   font-size: pxTorem(36px);
-  margin: pxTorem(40px) pxTorem(32px);
+  margin: 0 pxTorem(32px);
   text-align: center;
   background-color: rgb(73,184,73);
   border-radius: pxTorem(44px);
@@ -132,4 +132,11 @@ input[type="checkbox"] {
   position: absolute;
   background: #4cda60;
   box-shadow: 0 0 1px #4cda60;
+}
+
+.footer{
+  width: 100%;
+  background-color: #fff;
+  height: pxTorem(88px);
+  padding: pxTorem(40px) 0;
 }

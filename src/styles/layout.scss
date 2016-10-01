@@ -1,3 +1,6 @@
+html, body{
+  height: 100%;
+}
 
 body{
   background-color: #fff;
@@ -24,3 +27,6 @@ body{
 .icon-star-solid:before { content: '\e814'; }
 .icon-star:before { content: '\e815'; }
 
+.page{
+  height: 100%;
+}
