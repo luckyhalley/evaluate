@@ -29,7 +29,6 @@ export default class Star extends Component {
       } else {
         style = `icon-star-solid ${styles.star} ${styles.unselected}`;
       }
-      console.log(name);
       stars.push(<li key={i} className={style} onClick={e => this.starTo(e, i)} data-index={i}></li>);
     }
     return (

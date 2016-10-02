@@ -19,11 +19,15 @@ class Container extends Component {
     actionGetCourseInfo(0);
     actionGetScore();
   }
+  textareChange(event) {
+    let {evaluate} = this.props, {score} = evaluate;
+    score.comment = event.target.value;
+  }
   render() {
     let { evaluate, evaluate_param, actionUpdateScore } = this.props,
       { course, score } = evaluate;
     let button = <div className={styles.disable}>提交</div>;
-
+  console.log(score);
     return (
       <div>
         <Header title="课程评价"/>
@@ -38,11 +42,11 @@ class Container extends Component {
             )
           }
             <li className={styles.item}>
-              <textarea className={styles.text} value=''></textarea>}
+              <textarea className={styles.text} onChange={e => this.textareChange(e)}></textarea>}
             </li>
             <li className={`${styles.item} ${styles.min} clearfix`}>
               <span className={styles.right}>
-                <input type="checkbox" id="anonymous" className={styles.anonymous} onChange=''/>
+                <input type="checkbox" id="anonymous" className={styles.anonymous}/>
                 <label htmlFor='anonymous'></label>
               </span>
             <label className={`${styles.label} ${styles.right}`}>匿名评价</label>
