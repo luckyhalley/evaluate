@@ -20,14 +20,17 @@ class Container extends Component {
     actionGetScore();
   }
   textareChange(event) {
-    let {evaluate} = this.props, {score} = evaluate;
+    let {
+      evaluate,
+      actionUpdateScore
+    } = this.props, {score} = evaluate;
     score.comment = event.target.value;
+    actionUpdateScore(score);
   }
   render() {
     let { evaluate, evaluate_param, actionUpdateScore } = this.props,
       { course, score } = evaluate;
     let button = <div className={styles.disable}>提交</div>;
-  console.log(score);
     return (
       <div>
         <Header title="课程评价"/>

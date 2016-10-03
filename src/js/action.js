@@ -34,7 +34,6 @@ export function actionGetScore(classId) {
 }
 
 export function actionUpdateScore(score) {
-  console.log('aaa');
   return dispatch => {
     dispatch(
       {
