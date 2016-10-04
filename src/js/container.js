@@ -19,6 +19,9 @@ class Container extends Component {
     actionGetCourseInfo(0);
     actionGetScore();
   }
+  verification(data, require) {
+    return require.every((element, index) => data.hasOwnProperty(element));
+  }
   textareChange(event) {
     let {
       evaluate,
