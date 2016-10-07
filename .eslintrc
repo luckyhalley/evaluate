@@ -1,0 +1,13 @@
+{
+  "extends": "standard",
+  "plugins": [
+    "standard"
+  ],
+  "rules": {
+    "semi": ["error", "always"],
+    "quotes": ["off"],
+    "camelcase": ["off"],
+    "one-var": ["off"],
+    "no-unused-vars": ["off"]
+  }
+}
