@@ -6,7 +6,7 @@ let initState = {
   course: {},
   score: {}
 };
-function evaluate(state = initState, action) {
+function evaluate (state = initState, action) {
   switch (action.type) {
     case actionTypes.GET_COURSE_INFO:
       return objectAssign({}, state, action.course);
