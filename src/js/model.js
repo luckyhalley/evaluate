@@ -1,4 +1,4 @@
-export function getCourseInfo(classId) {
+export function getCourseInfo (classId) {
   return new Promise((resolve, reject) => {
     resolve(
       {
@@ -20,7 +20,7 @@ export function getCourseInfo(classId) {
   });
 }
 
-export function getScore(classId) {
+export function getScore (classId) {
   return new Promise((resolve, reject) => {
     resolve(
       {
