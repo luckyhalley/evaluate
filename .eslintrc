@@ -8,6 +8,7 @@
     "quotes": ["off"],
     "camelcase": ["off"],
     "one-var": ["off"],
-    "no-unused-vars": ["off"]
+    "no-unused-vars": ["off"],
+    "no-useless-constructor": ["off"]
   }
 }

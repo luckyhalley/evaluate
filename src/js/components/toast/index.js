@@ -2,11 +2,11 @@ import styles from "./index.scss?m";
 import React, {Component} from 'react';
 
 class Toast extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props);
   }
 
-  render() {
+  render () {
     return (
       <div className={styles.toast}>
         {this.props.text}
