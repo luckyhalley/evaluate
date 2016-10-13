@@ -2,7 +2,7 @@
  * Created by Halley.
  * 时间对象的格式化;
  */
-export function formatDate(date, format) {
+export function formatDate (date, format) {
   /*
    * eg:format="yyyy-MM-dd hh:mm:ss";
    */
