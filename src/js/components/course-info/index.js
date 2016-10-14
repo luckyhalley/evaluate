@@ -3,10 +3,10 @@ import React, {Component} from 'react';
 import { formatDate } from '../../utils';
 
 export default class CourseInfo extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props);
   }
-  render() {
+  render () {
     let {
       beginTime,
       className,
