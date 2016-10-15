@@ -1,7 +1,7 @@
 import * as actionTypes from "./actionTypes";
 import * as model from './model';
 
-export function actionGetCourseInfo(eventId) {
+export function actionGetCourseInfo (eventId) {
   return dispatch => {
     return model.getCourseInfo(eventId).then(response => {
       let course = response;
@@ -17,7 +17,7 @@ export function actionGetCourseInfo(eventId) {
   };
 }
 
-export function actionGetScore(classId) {
+export function actionGetScore (classId) {
   return dispatch => {
     return model.getScore(classId).then(response => {
       let score = response.data;
@@ -33,7 +33,7 @@ export function actionGetScore(classId) {
   };
 }
 
-export function actionUpdateScore(score) {
+export function actionUpdateScore (score) {
   return dispatch => {
     dispatch(
       {
