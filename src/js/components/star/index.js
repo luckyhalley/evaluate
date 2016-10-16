@@ -2,11 +2,11 @@ import styles from "./index.scss?m";
 import React, {Component} from 'react';
 
 export default class Star extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props);
   }
 
-  starTo(e, sc) {
+  starTo (e, sc) {
     let {setScore, name, score, readonly} = this.props;
     if (readonly) {
       return;
@@ -20,7 +20,7 @@ export default class Star extends Component {
     setScore(score);
   }
 
-  render() {
+  render () {
     let {max, name, score} = this.props,
       stars = [], style = ``;
     for (let i = 1; i <= max; i++) {
