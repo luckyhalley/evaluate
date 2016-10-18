@@ -8,7 +8,7 @@ import CourseInfo from "components/course-info";
 import Star from "components/star";
 
 class Container extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props);
   }
   componentWillMount() {
