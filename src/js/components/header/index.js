@@ -2,10 +2,10 @@ import styles from "./index.scss?m";
 import React, { Component } from 'react';
 
 export default class Header extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props);
   }
-  render() {
+  render () {
     return (
       <div className={styles.root}>
         <div className={styles.left}>
