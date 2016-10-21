@@ -30,7 +30,7 @@ class Container extends Component {
     score.comment = event.target.value;
     actionUpdateScore(score);
   }
-  render() {
+  render () {
     let { evaluate, evaluate_param, actionUpdateScore } = this.props,
       { course, score } = evaluate;
     let button = <div className={styles.disable}>提交</div>;
