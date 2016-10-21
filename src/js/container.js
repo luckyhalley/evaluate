@@ -63,7 +63,7 @@ class Container extends Component {
     );
   }
 }
-function mapStateToProps(state) {
+function mapStateToProps (state) {
   return mapState(state);
 }
 
