@@ -67,7 +67,7 @@ function mapStateToProps (state) {
   return mapState(state);
 }
 
-function mapDispatchToProps(dispatch) {
+function mapDispatchToProps (dispatch) {
   return mapDispatch(dispatch);
 }
 export default connect(mapStateToProps, mapDispatchToProps)(Container);
