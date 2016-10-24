@@ -70,4 +70,4 @@ function mapStateToProps (state) {
 function mapDispatchToProps (dispatch) {
   return mapDispatch(dispatch);
 }
-export default connect(mapStateToProps, mapDispatchToProps)(Container);
+export default connect (mapStateToProps, mapDispatchToProps)(Container);
