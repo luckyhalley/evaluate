@@ -5,6 +5,21 @@ export function mapState (state) {
   let { evaluate } = state;
   return {
     evaluate,
+    header_param: {
+      evaluate: {
+        goBack: () => {
+          window.history.back();
+        },
+        title: '评价'
+
+      },
+      show_evaluate: {
+        goBack: () => {
+          window.history.back();
+        },
+        title: '查看评价'
+      }
+    },
     evaluate_param: {
       harvest: "学习收获：",
       interaction: "互动氛围：",
