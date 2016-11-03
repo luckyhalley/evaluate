@@ -11,8 +11,8 @@ export function getCourseInfo (classId) {
         "teachers": [
           {
             "teacherId": 1,
-            "teacherImage": "http://i3.s.7.hjfile.cn/img/entry/201605/84690a79-07f0-416f-b8b1-49598a417587.jpg",
-            "teacherName": "Mike"
+            "teacherImage": "http://n1image.hjfile.cn/res7/2016/11/03/c5d66d9eafc4f5b4177626eb001e492d.jpg",
+            "teacherName": "Nicholas C. Zakas"
           }
         ]
       }
