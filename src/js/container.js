@@ -31,12 +31,19 @@ class Container extends Component {
     actionUpdateScore(score);
   }
   render () {
-    let { evaluate, evaluate_param, actionUpdateScore } = this.props,
+    let { evaluate, evaluate_param, header_param, actionUpdateScore } = this.props,
       { course, score } = evaluate;
     let button = <div className={styles.disable}>提交</div>;
+
+    let title = '';
+    if (course.allowComment) {
+      title = header_param.evaluate.title;
+    } else {
+      title = header_param.show_evaluate.title;
+    }
     return (
       <div>
-        <Header title="课程评价"/>
+        <Header title={title}/>
         <CourseInfo {...course}/>
         <ul className={styles.list}>
           {
