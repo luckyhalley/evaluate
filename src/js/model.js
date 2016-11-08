@@ -3,7 +3,7 @@ export function getCourseInfo (classId) {
     resolve(
       {
         "classId": 1,
-        "className": "测试课程",
+        "className": "JavaScript高级程序设计",
         "lessonName": "第一单元",
         "allowComment": true,
         "beginTime": "2016-9-6 20:00",

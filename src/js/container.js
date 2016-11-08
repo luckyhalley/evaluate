@@ -22,6 +22,9 @@ class Container extends Component {
   verification (data, require) {
     return require.every((element, index) => data.hasOwnProperty(element));
   }
+  evaluateSubmit () {
+    console.log('Submit');
+  }
   textareChange (event) {
     let {
       evaluate,
@@ -34,7 +37,9 @@ class Container extends Component {
     let { evaluate, evaluate_param, header_param, actionUpdateScore } = this.props,
       { course, score } = evaluate;
     let button = <div className={styles.disable}>提交</div>;
-
+    if (this.verification(score, Object.keys(evaluate_param))) {
+      button = <div className={styles.submit} onClick={e => this.evaluateSubmit(e)}>提交</div>;
+    }
     let title = '';
     if (course.allowComment) {
       title = header_param.evaluate.title;
