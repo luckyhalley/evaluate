@@ -33,6 +33,9 @@ export function actionGetScore (classId) {
   };
 }
 
+/*
+* 
+*/
 export function actionUpdateScore (score) {
   return dispatch => {
     dispatch(
